@@ -1,3 +1,5 @@
+import ContentWrapper from "./ContentWrapper.js";
+
 export default function ProfileContentWrapper({$app, initialState}) {
   this.state = initialState;
 
@@ -11,7 +13,7 @@ export default function ProfileContentWrapper({$app, initialState}) {
   }
 
   this.render = () => {
-    this.$target.innerHTML = '<h1></h1>';
+    const skillContent = new ContentWrapper({$wrapper: this.$target, title: "Skill"});
   }
 
   this.render();
