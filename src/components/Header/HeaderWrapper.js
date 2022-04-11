@@ -2,11 +2,11 @@ import ProfileCenter from "./ProfileCenter.js";
 import ProfileImage from "./ProfileImage.js";
 import ProfileRight from "./ProfileRight.js";
 
-export default function ProfileHeaderWrapper({$app, initialState}) {
+export default function HeaderWrapper({$app, initialState}) {
   this.state = initialState;
 
   this.$target = document.createElement('div');
-  this.$target.className = 'ProfileHeaderWrapper';
+  this.$target.className = 'HeaderWrapper';
   $app.appendChild(this.$target);
 
   this.setState = (nextState) => {
