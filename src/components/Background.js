@@ -11,7 +11,7 @@ export default function Background($app) {
   this.$target.appendChild(this.$text);
   $app.appendChild(this.$target);
 
-  // setInterval(()=>{
-  //   this.$text.style.backgroundSize="100% 100%";
-  // },2000);
+  setInterval(()=>{
+    this.$text.style.backgroundSize = this.$text.style.backgroundSize === "100% 100%" ? "0% 100%" : "100% 100%" ;
+  },5000);
 }
