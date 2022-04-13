@@ -56,16 +56,13 @@ img {
   line-height: 1.2;
   background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
   background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size 1s;
+  background-size: 100% 100%;
+  transition: background-size 2s;
   color: #000;
 }
 
 .BackgroundText.underline {
   background-image: linear-gradient(transparent 60%, #3F72AF 40%);
-}
-.BackgroundText:hover {
-  background-size: 100% 100%;
 }
 
 .HeaderWrapper {
@@ -216,7 +213,7 @@ img {
   background-color: rgba(46, 13, 36, 0.9);
   /* overflow: hidden; */
   /* background: linear-gradient(to bottom left, #24c6dc, #514a9d); */
-  width: 952px;
+  max-width: 952px;
   font-size: 13px;
   min-height: calc( 100vh - 511px );
   padding: 30px;
@@ -380,6 +377,18 @@ img {
   border-radius: 5px;
   background-color: #3F72AF;
 }
+.projectBox {
+  overflow: hidden;
+  color: #c7c7c7;
+  background-color: rgba( 0, 0, 0, 0.3 );
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.projectList{
+  display: flex;
+}
+
 
 @media (max-width: 767px) {
   .App{
