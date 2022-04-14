@@ -11,7 +11,7 @@ export default function EducationWrapper($container){
   this.$education = document.createElement('div');
   this.$education.className = 'EduWrapper';
   this.$education.innerHTML = `
-  <img style="box-shadow: 1px 1px 2px #0c0c0c; width: 50px; height: 50px; border-radius: 3px;"src="./src/img/education.jpg" />
+  <img style="box-shadow: 1px 1px 2px #0c0c0c; width: 50px; height: 50px; border-radius: 3px;"src="./src/steam/img/education.jpg" />
   <div style="display: flex; flex-direction: column; margin-left: 10px;">
     <span style="color: #ebebeb;">동국대학교  (2022.02 졸업)</span>
     <span style="color: #969696; font-size: 13px;">컴퓨터 정보통신공학부<br/>컴퓨터 공학 전공</span>

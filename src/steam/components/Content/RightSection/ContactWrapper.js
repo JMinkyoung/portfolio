@@ -26,7 +26,7 @@ export default function ContactWrapper($container) {
       this.$contact.setAttribute('data-tooltip-text', this.state[key][1])
       this.$contact.innerHTML = `
       <a href=${this.state[key][0]} target="_blank">
-        <img src="./src/img/${key}.png" />
+        <img src="./src/steam/img/${key}.png" />
       </a>`;
     
       this.$wrapper.appendChild(this.$contact);

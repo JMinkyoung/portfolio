@@ -23,7 +23,7 @@ export default function SkillWrapper($container) {
       this.$skill = document.createElement('div');
       this.$skill.className = 'SkillWrapper';
       this.$skill.innerHTML = `
-      <div style="padding: 3px"><img src="./src/img/${key}.png" /></div>
+      <div style="padding: 3px"><img src="./src/steam/img/${key}.png" /></div>
       <div class="SkillContent">
         <span>${this.state[key][1]}<span style="float:right">${this.state[key][0]}%</span></span>
         <div class="skillProgress">

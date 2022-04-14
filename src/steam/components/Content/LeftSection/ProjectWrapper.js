@@ -32,17 +32,17 @@ export default function ProjectWrapper($container) {
     this.$project.style.cssText = `display: flex; flex-direction: column; justify-content:center; width:${width}px; padding-right: 14px;`
     this.$project.innerHTML =`
     <div class="projectImg">
-      <img style="width: 100%; height:auto;" src="./src/img/project/${arr[0]}.png" />
+      <img style="width: 100%; height:auto;" src="./src/steam/img/project/${arr[0]}.png" />
     </div>
     <div class="projectDesc">
       <span>${arr[1]}</span>
     </div>
     <div class="projectLink">
       <a href=${arr[2]} target='_blank'>
-        <img style="width: 25px; height:25px;" src="./src/img/project/github.png"/>
+        <img style="width: 25px; height:25px;" src="./src/steam/img/project/github.png"/>
       </a>
       <a href=${arr[3]} target='_blank'>
-        <img style="width: 25px; height:25px;" src="./src/img/project/web.png"/>
+        <img style="width: 25px; height:25px;" src="./src/steam/img/project/web.png"/>
       </a>
     </div>
     `
