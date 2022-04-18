@@ -8,7 +8,6 @@
 html{height: 100%;}
 body{
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,7 +141,7 @@ img {
 .MainTitleText.underline {
   background-image: linear-gradient(transparent 60%, #3F72AF 40%);
 }
-.IntroduceWrapper{
+.SectionWrapper{
   display: flex;
   width: 65%;
   flex-direction: column;
@@ -150,6 +149,43 @@ img {
   margin-top: 10%;
   padding: 20px;
   z-index: -1;
+}
+
+.SkillWrapper{
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.SkillContent{
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  width: 300px;
+  margin-bottom: 50px;
+}
+.SkillContent img {
+  width: 80px;
+  height: 80px;
+}
+.SkillRight{
+  width: 70%;
+}
+
+.skillProgress {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #0b1d30;
+}
+
+.skillBar {
+  margin-top: 20px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #3F72AF;
+  animation: progress 2s;
 }
 
 @media (max-width: 1024px) {
@@ -208,7 +244,7 @@ img {
     font-size: 35px;
     text-align: center;
   }
-  .IntroduceWrapper{
+  .SectionWrapper{
     width: 90%;
   }
 }
@@ -220,4 +256,13 @@ img {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to{
+    width: var(--progress);
+  }
 }

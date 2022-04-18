@@ -1,12 +1,14 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 const main = document.querySelector(".MainWrapper");
-const introduce = document.querySelector(".IntroduceWrapper");
+const introduce = document.querySelector("#introduce");
+const skill = document.querySelector("#skill");
 const navLinks = document.querySelectorAll(".nav-links li");
 const MainTitle = document.querySelector(".MainTitleText");
 
 
 const firstTop = introduce.getBoundingClientRect().top;
+const secondTop = skill.getBoundingClientRect().top;
 
 const navAnimation = () => {
   navLinks.forEach((link, idx) => {
@@ -51,9 +53,11 @@ const init = () => {
   },5000);
 
   navLinks[0].addEventListener("click", () => {
-    window.scroll({top:firstTop, behavior: 'smooth'});
+    window.scroll({top:window.pageYOffset+firstTop, behavior: 'smooth'});
   });
-  console.log(firstTop);
+  navLinks[1].addEventListener("click", () => {
+    window.scroll({top:window.pageYOffset+secondTop, behavior: 'smooth'});
+  });
 }
 
 init();
