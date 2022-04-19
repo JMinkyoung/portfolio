@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">  
   <title>Portfolio :: Jminkyoung</title>
 </head>
 <body>
@@ -58,7 +58,8 @@
       <div class="SkillContent">
         <img src="./src/steam/img/HTML.png"/>
         <div class="SkillRight">
-          <h1>HTML</h1>
+          <h1>HTML<span>90%</span>
+          </h1>
           <div class="skillProgress">
             <div class="skillBar" style="width: 90%; --progress:90%;"></div>
           </div>
@@ -67,7 +68,7 @@
       <div class="SkillContent">
         <img src="./src/steam/img/CSS.png"/>
         <div class="SkillRight">
-          <h1>CSS</h1>
+          <h1>CSS<span>60%</span>
           <div class="skillProgress">
             <div class="skillBar" style="width: 60%; --progress:60%;"></div>
           </div>
@@ -76,7 +77,7 @@
       <div class="SkillContent">
         <img src="./src/steam/img/JS.png"/>
         <div class="SkillRight">
-          <h1>JavaScript</h1>
+          <h1>JavaScript<span>90%</span>
           <div class="skillProgress">
             <div class="skillBar" style="width: 90%; --progress:90%;"></div>
           </div>
@@ -85,7 +86,7 @@
       <div class="SkillContent">
         <img src="./src/steam/img/React.png"/>
         <div class="SkillRight">
-          <h1>React</h1>
+          <h1>React<span>80%</span>
           <div class="skillProgress">
             <div class="skillBar" style="width: 80%; --progress:80%;"></div>
           </div>
@@ -94,7 +95,7 @@
       <div class="SkillContent">
         <img src="./src/steam/img/Redux.png" />
         <div class="SkillRight">
-          <h1>Redux</h1>
+          <h1>Redux<span>60%</span>
           <div class="skillProgress">
             <div class="skillBar" style="width: 60%;  --progress:60%;"></div>
           </div>
@@ -103,7 +104,7 @@
       <div class="SkillContent">
         <img src="./src/steam/img/TS.png"/>
         <div class="SkillRight">
-          <h1>TypeScript</h1>
+          <h1>TypeScript<span>50%</span>
           <div class="skillProgress">
             <div class="skillBar" style="width: 50%;  --progress:50%;" ></div>
           </div>
@@ -112,7 +113,7 @@
       <div class="SkillContent">
         <img src="./src/steam/img/Node.png" />
         <div class="SkillRight">
-          <h1>Node.js</h1>
+          <h1>Node.js<span>40%</span>
           <div class="skillProgress">
             <div class="skillBar" style="width: 40%;  --progress:40%;"></div>
           </div>
@@ -121,8 +122,116 @@
     </div>
   </div>
   <!--Projects-->
-  <div class="SectionWrapper"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+  <div style="width: auto;" class="SectionWrapper"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
     <h1 class="title">PROJECTS :</h1>
+    <div class="ProjectWrapper">
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/Digging.png"/></div>
+        <div class="ProjectDesc">
+          <h1>냉장고 파먹기</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              냉장고에 남은 재료로 뭘 만들어 먹을 수 있을까? 라는 생각에서 시작되어<br/>냉장고, 혹은 집에 남아있는 식재료를 입력하면 해당 식재료로 만들 수 있는 요리 레시피를 알려주는 모바일 웹사이트
+            </p>
+          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              Frontend : React.js, TypeScript, Next.js, Redux, Redux-Saga, styled-components<br/>
+              Backend : Node.js, Express, MongoDB, Python
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <a href="https://github.com/JMinkyoung/Digging-Fridge" target='_blank'>
+              <img style="width: 25px; height:25px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </a>
+            <a href="http://diggingfridge.shop/" target='_blank'>
+              배포 사이트
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/OCT.png"/></div>
+        <div class="ProjectDesc">
+          <h1 style="text-align: center;">Ocular Timer</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              유명한 '그' 회사에서 직원들이 사용한다는 비싼 '그 타이머'를 무료로 PC와 모바일로도 사용해보자 ⏱
+            </p>
+          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              React.js, TypeScript, Next.js, Redux, styled-components
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <a href="https://github.com/JMinkyoung/OcularTimer" target='_blank'>
+              <img style="width: 25px; height:25px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </a>
+            <a href="https://oculartimer.vercel.app/" target='_blank'>
+              배포 사이트
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/Netflix.png"/></div>
+        <div class="ProjectDesc">
+          <h1 style="text-align: center;">Netflix Clone</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              간단한 Animation과 제공되고 있는 API 데이터를 직접 사용해보기 위해 기존에 있는 Netflix 사이트 Clone            </p>
+          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              React.js, Next.js, Redux, Redux-saga, styled-components
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <a href="https://github.com/JMinkyoung/Netflix-Clone" target='_blank'>
+              <img style="width: 25px; height:25px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </a>
+            <a href="https://netflix-clone-five-kohl.vercel.app/" target='_blank'>
+              배포 사이트
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/Drawing.png"/></div>
+        <div class="ProjectDesc">
+          <h1 style="text-align: center;">오늘의 그림일기</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              일기는 쓰고 싶지만 글 재주가 없는 사람을 위한, 직접 그린 그림과 함께 짤막한 생각을 기록할 수 있는 그림일기          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              React.js, Next.js, Redux, styled-components
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <a href="https://github.com/JMinkyoung/Drawing-Diary" target='_blank'>
+              <img style="width: 25px; height:25px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </a>
+            <a href="https://drawing-diary.vercel.app/" target='_blank'>
+              배포 사이트
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>AOS.init();</script>
