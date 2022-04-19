@@ -3,12 +3,15 @@ const nav = document.querySelector(".nav-links");
 const main = document.querySelector(".MainWrapper");
 const introduce = document.querySelector("#introduce");
 const skill = document.querySelector("#skill");
+const skillBars = document.querySelectorAll(".skillBar");
 const navLinks = document.querySelectorAll(".nav-links li");
 const MainTitle = document.querySelector(".MainTitleText");
 
 
 const firstTop = introduce.getBoundingClientRect().top;
 const secondTop = skill.getBoundingClientRect().top;
+
+let isVisible = false;
 
 const navAnimation = () => {
   navLinks.forEach((link, idx) => {
@@ -43,20 +46,46 @@ const handleResize = () => {
   setNavTransition(width);
 };
 
+const isScrolledIntoView = (el) => {
+  let rect = el.getBoundingClientRect();
+  let elemTop = rect.top;
+  let elemBottom = rect.bottom;
+  let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  
+  return isVisible;
+}
 
 const init = () => {
   AOS.init();
+  let visible = false;
+
   window.addEventListener("resize", handleResize);
+  window.addEventListener('scroll', () => {
+    if(isScrolledIntoView(document.querySelector("#skill")) && !visible){
+      visible = true;
+      skillBars.forEach((v)=>{
+        v.classList.remove("effect");
+        void v.offsetWidth;
+        v.classList.add("effect");
+      })
+    }else if(!isScrolledIntoView(document.querySelector("#skill")) && visible){
+      visible = false;
+    }
+  });
+
   navSlide();
   setInterval(()=>{
     MainTitle.style.backgroundSize = MainTitle.style.backgroundSize === "100% 100%" ? "0% 100%" : "100% 100%" ;
   },5000);
 
   navLinks[0].addEventListener("click", () => {
-    window.scroll({top:window.pageYOffset+firstTop, behavior: 'smooth'});
+    // window.scrollTo({top:600, behavior: 'smooth'});
+    introduce.scrollIntoView({behavior: 'smooth', block: 'center'})
+  
   });
   navLinks[1].addEventListener("click", () => {
-    window.scroll({top:window.pageYOffset+secondTop, behavior: 'smooth'});
+    // window.scrollTo({top:window.pageYOffset+secondTop, behavior: 'smooth'});
+    skill.scrollIntoView({behavior: 'smooth', block: 'center'})
   });
 }
 
