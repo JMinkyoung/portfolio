@@ -4,6 +4,7 @@ const main = document.querySelector(".MainWrapper");
 const introduce = document.querySelector("#introduce");
 const skill = document.querySelector("#skill");
 const project = document.querySelector("#project");
+const contact = document.querySelector("#contact");
 const skillBars = document.querySelectorAll(".skillBar");
 const navLinks = document.querySelectorAll(".nav-links li");
 const MainTitle = document.querySelector(".MainTitleText");
@@ -87,6 +88,9 @@ const init = () => {
   });
   navLinks[2].addEventListener("click", () => {
     project.scrollIntoView({behavior: 'smooth', block: 'start'})
+  });
+  navLinks[3].addEventListener("click", () => {
+    contact.scrollIntoView({behavior: 'smooth', block: 'start'})
   });
 }
 

@@ -260,9 +260,44 @@ img {
   cursor: pointer;
   margin-left: 10px;
 }
-
 .LinkWrapper div:hover{
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+.ContactWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  /* background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  border-radius: 5px; */
+}
+.ContactImg{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  right: 0;
+  top: 30;
+  z-index: -1;
+}
+
+.ContactWrapper div .icon {
+  width: 100px;
+}
+.ContactWrapper div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ContactWrapper a{
+  font-size: 1.5rem;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+footer{
+  margin-top: 200px;
 }
 @media (max-width: 1024px) {
   .nav-links {
@@ -396,6 +431,33 @@ img {
   .LinkWrapper {
     margin-top: 10px;
     justify-content: space-around;
+  }
+  .ContactWrapper div .icon {
+    width: 50px;
+  }
+  .ContactImg{
+    /* width: 150px;
+    height: 150px;
+    top: 0;
+    right: 0; */
+    display: none;
+  }
+
+  .ContactWrapper div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .ContactWrapper a{
+    font-size: 1rem;
+    margin-left: 30px;
+    font-weight: 500;
+  }
+  footer{
+    margin-top: 20px;
+  }
+  footer p{
+    font-size: 1rem;
   }
 }
 .toggle .line1 {
