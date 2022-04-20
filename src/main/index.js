@@ -3,6 +3,7 @@ const nav = document.querySelector(".nav-links");
 const main = document.querySelector(".MainWrapper");
 const introduce = document.querySelector("#introduce");
 const skill = document.querySelector("#skill");
+const project = document.querySelector("#project");
 const skillBars = document.querySelectorAll(".skillBar");
 const navLinks = document.querySelectorAll(".nav-links li");
 const MainTitle = document.querySelector(".MainTitleText");
@@ -79,13 +80,13 @@ const init = () => {
   },5000);
 
   navLinks[0].addEventListener("click", () => {
-    // window.scrollTo({top:600, behavior: 'smooth'});
     introduce.scrollIntoView({behavior: 'smooth', block: 'center'})
-  
   });
   navLinks[1].addEventListener("click", () => {
-    // window.scrollTo({top:window.pageYOffset+secondTop, behavior: 'smooth'});
     skill.scrollIntoView({behavior: 'smooth', block: 'center'})
+  });
+  navLinks[2].addEventListener("click", () => {
+    project.scrollIntoView({behavior: 'smooth', block: 'start'})
   });
 }
 
