@@ -8,7 +8,7 @@ const contact = document.querySelector("#contact");
 const skillBars = document.querySelectorAll(".skillBar");
 const navLinks = document.querySelectorAll(".nav-links li");
 const MainTitle = document.querySelector(".MainTitleText");
-
+const topBtn = document.querySelector(".TopButton");
 
 const firstTop = introduce.getBoundingClientRect().top;
 const secondTop = skill.getBoundingClientRect().top;
@@ -59,19 +59,21 @@ const isScrolledIntoView = (el) => {
 
 const init = () => {
   AOS.init();
-  let visible = false;
+
+  let skillVisible = false;
 
   window.addEventListener("resize", handleResize);
   window.addEventListener('scroll', () => {
-    if(isScrolledIntoView(document.querySelector("#skill")) && !visible){
-      visible = true;
+
+    if(isScrolledIntoView(document.querySelector("#skill")) && !skillVisible){
+      skillVisible = true;
       skillBars.forEach((v)=>{
         v.classList.remove("effect");
         void v.offsetWidth;
         v.classList.add("effect");
       })
-    }else if(!isScrolledIntoView(document.querySelector("#skill")) && visible){
-      visible = false;
+    }else if(!isScrolledIntoView(document.querySelector("#skill")) && skillVisible){
+      skillVisible = false;
     }
   });
 
@@ -92,6 +94,10 @@ const init = () => {
   navLinks[3].addEventListener("click", () => {
     contact.scrollIntoView({behavior: 'smooth', block: 'start'})
   });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({top:0, left:0, behavior:'smooth'});
+  })
 }
 
 init();
