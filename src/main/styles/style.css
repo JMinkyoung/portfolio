@@ -43,7 +43,6 @@ span {
 }
 p{
   font-size: 1.2rem;
-  /* text-align: center; */
 }
 .TopButton{
   position: fixed;
@@ -59,7 +58,7 @@ p{
   background: #3F72AF;
   font-size: 18px;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255);
   box-shadow: 0px 4px 8px 0 rgb(72 53 222 / 8%);
   box-sizing: border-box;
   cursor: pointer;
@@ -71,8 +70,8 @@ p{
   height: 5px;
   padding-bottom: 4px;
   opacity: 0.8;
-  border-top: 2px solid rgba(255, 255, 255, 0.8); 
-  border-right: 2px solid rgba(255, 255, 255, 0.8);
+  border-top: 2px solid rgba(255, 255, 255); 
+  border-right: 2px solid rgba(255, 255, 255);
   display: inline-block;
   transform: rotate(315deg); 
   position: absolute;
@@ -96,6 +95,7 @@ p{
 }
 .nav-links li {
   list-style: none;
+  margin-bottom: 5px;
 }
 .nav-links a {
   position: relative;
@@ -329,7 +329,7 @@ img {
 }
 
 footer{
-  margin-top: 200px;
+  margin: 200px 0px 30px 0px;
 }
 @media (max-width: 1024px) {
   .nav-links {
@@ -486,7 +486,7 @@ footer{
     font-weight: 500;
   }
   footer{
-    margin-top: 20px;
+    margin: 20px 0px 20px 0px;
   }
   footer p{
     font-size: 1rem;
