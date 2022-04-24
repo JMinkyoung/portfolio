@@ -1,3 +1,10 @@
+:root {
+  --main-profile-color: #8db63a;
+  --light-back-color: whitesmoke;
+  --light-color: #ccc;
+  --dark-back-color: #1E1E22;
+  --dark-color: #31302E;
+}
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color : rgba(0,0,0,0);
@@ -43,6 +50,12 @@ span {
 }
 p{
   font-size: 1.2rem;
+}
+.toggle{
+  position: absolute;
+  background-color: red;
+  top: 100px;
+  right: 100px;
 }
 .TopButton{
   position: fixed;
@@ -508,5 +521,12 @@ footer{
   }
   to{
     width: var(--progress);
+  }
+}
+
+@media (prefers-color-scheme: black) {
+  .themed {
+    background: var(--dark-back-color);
+    color: var(--light-color);
   }
 }
