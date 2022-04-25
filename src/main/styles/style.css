@@ -1,16 +1,38 @@
 :root {
   --main-profile-color: #8db63a;
-  --light-back-color: whitesmoke;
-  --light-color: #ccc;
+  --light-back-color: whitesmoke;  
+  --light-color: black;
+  --light-card-back-color: rgb(255, 255, 255);
+  --dark-color: #ccc;
   --dark-back-color: #1E1E22;
-  --dark-color: #31302E;
+  --dark-card-back-color: rgb(34, 34, 34);
+  --main-blue: #3F72AF;
+  --moon: "\f186";
+  --sun: "\f185";
+  --left: 13px;
+}
+:root[color-theme='light']{
+  --background : var(--light-back-color);
+  --color : var(--light-color);
+  --icon-color: var(--light-color);
+  --icon : var(--moon);
+  --card-back-color: var(--light-card-back-color);
+  --left : 13px;
+}
+:root[color-theme='dark']{
+  --background : var(--dark-back-color);
+  --color : var(--dark-color);
+  --icon-color: var(--light-color);
+  --icon : var(--sun);
+  --card-back-color: var(--dark-card-back-color);
+  --left : 43px;
 }
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color : rgba(0,0,0,0);
   margin: 0;
   padding: 0;
-
+  transition: background-color 1s, color 0.1s, border 0.5s;
 }
 html{height: 100%;}
 body{
@@ -19,12 +41,17 @@ body{
   flex-direction: column;
   align-items: center;
   font-family: Noto Sans KR,-apple-system,BlinkMacSystemFont,helvetica,AppleSDGothicNeo,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-  background-color: whitesmoke;
+  background-color: var(--background);
+  color: var(--color);
   -webkit-user-select:none; 
   -moz-user-select:none; 
   -ms-user-select:none; 
   user-select:none;
   z-index: 100;
+}
+.fa-solid{
+  font-size: 30px;
+  margin: 0 5px 0 5px;
 }
 header {
   position: fixed;
@@ -40,7 +67,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #3F72AF;
+  background-color: var(--main-blue);
   color: white;
   z-index: 10000;
 }
@@ -52,10 +79,83 @@ p{
   font-size: 1.2rem;
 }
 .toggle{
+  display: flex;
   position: absolute;
-  background-color: red;
+  justify-content: center;
+  align-items: center;
   top: 100px;
   right: 100px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 41px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 28px;
+  content: var(--icon);
+  position: absolute;
+  left:var(--left);
+  top:6px;
+  z-index: 100;
+  color: var(--icon-color);
+  transition: .4s;
+
+
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 1000;
+}
+
+input:checked + .slider {
+  background-color: var(--main-blue);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--main-blue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(38px);
+  -ms-transform: translateX(38px);
+  transform: translateX(38px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 .TopButton{
   position: fixed;
@@ -68,7 +168,7 @@ p{
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: #3F72AF;
+  background: var(--main-blue);
   font-size: 18px;
   font-weight: bold;
   color: rgba(255, 255, 255);
@@ -180,14 +280,14 @@ img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transition: background-size 2s;
-  color: rgb(0, 0, 0);
+  color: var(--color);
   font-size: 90px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight:700;
 }
 
 .MainTitleText.underline {
-  background-image: linear-gradient(transparent 60%, #3F72AF 40%);
+  background-image: linear-gradient(transparent 60%, var(--main-blue) 40%);
 }
 .SectionWrapper{
   display: flex;
@@ -204,7 +304,7 @@ img {
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--card-back-color);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   border-radius: 5px;
 }
@@ -213,6 +313,7 @@ img {
   display: flex;
   width: 300px;
   margin-bottom: 50px;
+  color: var(--color);
 }
 .SkillContent img {
   width: 80px;
@@ -239,7 +340,7 @@ img {
   margin-top: 20px;
   height: 10px;
   border-radius: 5px;
-  background-color: #3F72AF;
+  background-color: var(--main-blue);
 }
 
 .skillBar.effect {
@@ -314,9 +415,6 @@ img {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  /* background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  border-radius: 5px; */
 }
 .ContactImg{
   position: absolute;
@@ -358,7 +456,7 @@ footer{
     top: 8vh;
     left: 0;
     right: 0;
-    background-color: #3F72AF;
+    background-color: var(--main-blue);
     flex-direction: column;
     align-items: center;
     width: 100%;

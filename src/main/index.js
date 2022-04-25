@@ -9,7 +9,7 @@ const skillBars = document.querySelectorAll(".skillBar");
 const navLinks = document.querySelectorAll(".nav-links li");
 const MainTitle = document.querySelector(".MainTitleText");
 const topBtn = document.querySelector(".TopButton");
-const toggle = document.querySelector('.toggle');
+const toggleBtn = document.querySelector('.toggleBtn');
 
 const firstTop = introduce.getBoundingClientRect().top;
 const secondTop = skill.getBoundingClientRect().top;
@@ -61,10 +61,6 @@ const isScrolledIntoView = (el) => {
 const init = () => {
   AOS.init();
 
-  toggle.addEventListener('click', (e) => {
-
-  })
-
   let skillVisible = false;
 
   window.addEventListener("resize", handleResize);
@@ -102,6 +98,15 @@ const init = () => {
 
   topBtn.addEventListener("click", () => {
     window.scrollTo({top:0, left:0, behavior:'smooth'});
+  });
+
+  toggleBtn.addEventListener("click", (e) => {
+    if(e.target.checked){
+      document.documentElement.setAttribute('color-theme', 'light');
+    }else{
+      document.documentElement.setAttribute('color-theme', 'dark');
+
+    }
   })
 }
 
