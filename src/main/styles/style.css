@@ -78,7 +78,7 @@ span {
 p{
   font-size: 1.2rem;
 }
-.toggle{
+.toggleWrapper{
   display: flex;
   position: absolute;
   justify-content: center;
@@ -482,6 +482,14 @@ footer{
       transform: translateX(0);
     }
   }
+  .TopButton{
+    bottom: 20px;
+    right: 20px;
+  }
+  .toggleWrapper{
+    top: 80px;
+    right: 20px;
+  }
   .HomeWrapper{
     margin-top: 30%;
     margin-left: 8%;
@@ -579,10 +587,6 @@ footer{
     width: 50px;
   }
   .ContactImg{
-    /* width: 150px;
-    height: 150px;
-    top: 0;
-    right: 0; */
     display: none;
   }
 
@@ -619,6 +623,17 @@ footer{
   }
   to{
     width: var(--progress);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
