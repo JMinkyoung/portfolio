@@ -5,13 +5,13 @@
 html,
 body,
 #root {
+  margin: 0;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  background: #07090d;
-  color: #f7f8fb;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #9ec9ff;
 }

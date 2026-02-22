@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko" color-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/main/styles/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">  
+  <script src="https://kit.fontawesome.com/3482723816.js" crossorigin="anonymous"></script>
+  <title>Portfolio :: Jminkyoung</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h4>{ Portfolio }</h4>
+      </div>
+      <ul class="nav-links">
+        <li><a>INTRODUCE :</a></li>
+        <li><a>SKILLS :</a></li>
+        <li><a>PROJECTS :</a></li>
+        <li><a>CONTACT :</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+  <span class="TopButton"style="z-index: 10000">top</span>
+  <div class="toggleWrapper">
+    <label class="switch">
+      <input type="checkbox" class="toggleBtn" checked>
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <!--Home-->
+  <div class="HomeWrapper">
+    <div class="MainTitleWrapper">
+      <span class="MainTitleText underline">
+      안녕하세요!<br/>Frontend Engineer<br/>좌민경 입니다.
+      </span>
+    </div>
+    <img class="HomeImage"src="./src/main/img/me22.png"/>
+  </div>
+  <!--Introduce-->
+  <div class="SectionWrapper" id="introduce" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+    <h1 class="title">INTRODUCE :</h1>
+    <p>"저는 2022년 2월 동국대학교 컴퓨터 공학과를 졸업한, 개발자로서의 새로운 도약을 위해 준비하고 있는 신입 프론트엔드 개발자 좌민경입니다.<br/><br/>
+      개발자가 되고 싶다는 꿈을 가지고 원하던 컴퓨터 공학과에 입학하였지만 생각했던 것보다 개발자라는 직업의 분야가 다양했고
+      수업을 들어도 스스로 ‘나의 길이다’ 싶었던 분야를 찾지 못해서 방황을 하던 중, ‘이대로 졸업하면 안 되겠다 새로운 환경에서 여러 경험이라도 해보자’ 싶은 마음에 휴학을 하고 2019년 일본으로 10개월 정도 워킹 홀리데이를 떠났습니다.<br/><br/>
+      그렇게 일본에서 생활을 하던 중 웹 디자이너 겸 퍼블리셔가 있는 회사에서 알바를 하게 되었고 내가 만들어낸 것이 유저에게 바로 보이고, 그에 대한 반응을 바로 확인할 수 있다는 점에 매력을 느끼게 되어 퍼블리셔보단 전공을 더 살릴 수 있는 <b>프론트엔드 개발자</b>가 돼야겠다는 다짐을 하게 되었습니다.<br/><br/>
+      저는 어떻게 해야 유저가 <b>편하게</b> 이용할 수 있을까, 어떻게 해야 <b>보기 좋게</b> 구현할 수 있을까, 어떻게 해야 <b>효율적</b>으로 구현할 수 있을까를 항상 고민합니다. 또한 유저와 코드를 통해 소통하고 피드백을 통해 성장하며 새로운 것을 배우는 것을 두려워하지 않습니다."</p>
+  </div>
+  <!--Skills-->
+  <div class="SectionWrapper" id="skill" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+    <h1 class="title">SKILLS :</h1>
+    <div class="SkillWrapper">
+      <div class="SkillContent">
+        <img src="./src/steam/img/HTML.png"/>
+        <div class="SkillRight">
+          <h1>HTML<span>90%</span>
+          </h1>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 90%; --progress:90%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="SkillContent">
+        <img src="./src/steam/img/CSS.png"/>
+        <div class="SkillRight">
+          <h1>CSS<span>60%</span>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 60%; --progress:60%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="SkillContent">
+        <img src="./src/steam/img/JS.png"/>
+        <div class="SkillRight">
+          <h1>JavaScript<span>90%</span>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 90%; --progress:90%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="SkillContent">
+        <img src="./src/steam/img/React.png"/>
+        <div class="SkillRight">
+          <h1>React<span>80%</span>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 80%; --progress:80%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="SkillContent">
+        <img src="./src/steam/img/Redux.png" />
+        <div class="SkillRight">
+          <h1>Redux<span>60%</span>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 60%;  --progress:60%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="SkillContent">
+        <img src="./src/steam/img/TS.png"/>
+        <div class="SkillRight">
+          <h1>TypeScript<span>50%</span>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 50%;  --progress:50%;" ></div>
+          </div>
+        </div>
+      </div>
+      <div class="SkillContent">
+        <img src="./src/steam/img/Node.png" />
+        <div class="SkillRight">
+          <h1>Node.js<span>40%</span>
+          <div class="skillProgress">
+            <div class="skillBar" style="width: 40%;  --progress:40%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Projects-->
+  <div class="SectionWrapper" id="project" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+    <h1 class="title">PROJECTS :</h1>
+    <div class="ProjectWrapper">
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/Digging.png"/></div>
+        <div class="ProjectDesc">
+          <h1>냉장고 파먹기</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              냉장고에 남은 재료로 뭘 만들어 먹을 수 있을까? 라는 생각에서 시작되어<br/>냉장고, 혹은 집에 남아있는 식재료를 입력하면 해당 식재료로 만들 수 있는 요리 레시피를 알려주는 모바일 웹사이트
+            </p>
+          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              Frontend : React.js, TypeScript, Next.js, Redux, Redux-Saga, styled-components<br/>
+              Backend : Node.js, Express, MongoDB, Python
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <div onclick="window.open('https://github.com/JMinkyoung/Digging-Fridge')">
+              <img style="width: 30px; height:30px; margin-right: 5px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </div>
+            <div onclick="window.open('http://diggingfridge.shop/')">
+              배포 사이트
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/OCT.png"/></div>
+        <div class="ProjectDesc">
+          <h1 style="text-align: center;">Ocular Timer</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              유명한 '그' 회사에서 직원들이 사용한다는 비싼 '그 타이머'를 무료로 PC와 모바일로도 사용해보자 ⏱
+            </p>
+          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              React.js, TypeScript, Next.js, Redux, styled-components
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <div onclick="window.open('https://github.com/JMinkyoung/OcularTimer')">
+              <img style="width: 30px; height:30px; margin-right: 5px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </div>
+            <div onclick="window.open('https://oculartimer.vercel.app/')">
+              배포 사이트
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/Netflix.png"/></div>
+        <div class="ProjectDesc">
+          <h1 style="text-align: center;">Netflix Clone</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              간단한 Animation과 제공되고 있는 API 데이터를 직접 사용해보기 위해 기존에 있는 Netflix 사이트 Clone            </p>
+          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              React.js, Next.js, Redux, Redux-saga, styled-components
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <div onclick="window.open('https://github.com/JMinkyoung/Netflix-Clone')">
+              <img style="width: 30px; height:30px; margin-right: 5px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </div>
+            <div onclick="window.open('https://netflix-clone-five-kohl.vercel.app/')">
+              배포 사이트
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ProjectContent" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <div class="ProjectImg"><img style="width: 100%" src="./src/steam/img/project/Drawing.png"/></div>
+        <div class="ProjectDesc">
+          <h1 style="text-align: center;">오늘의 그림일기</h1>
+          <div class="DescWrapper">
+            <span>Description</span>
+            <p>
+              일기는 쓰고 싶지만 글 재주가 없는 사람을 위한, 직접 그린 그림과 함께 짤막한 생각을 기록할 수 있는 그림일기          </div>
+          <div class="TeckWrapper">
+            <span>Tech Stack</span>
+            <p>
+              React.js, Next.js, Redux, styled-components
+            </p>            
+          </div>
+          <div class="LinkWrapper">
+            <div onclick="window.open('https://github.com/JMinkyoung/Drawing-Diary')">
+              <img style="width: 30px; height:30px; margin-right: 5px;" src="./src/steam/img/project/github_black.png"/>
+              Github
+            </div>
+            <div onclick="window.open('https://drawing-diary.vercel.app/')">
+              배포 사이트
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Contact-->
+  <div class="SectionWrapper" id="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+    <h1 class="title">CONTACT :</h1>
+    <div class="ContactWrapper">
+      <img class="ContactImg" src="./src/main/img/me3.png"/>
+      <div class="EmailWrapper">
+        <img class="icon" src="./src/steam/img/email.png"/>
+        <a href="mailto:whk5817@gmail.com" target="_blank">whk5817@gmail.com</a>
+        </div>
+      <div class="GithubWrapper">
+        <img class="icon" src="./src/steam/img/project/github_black2.png"/>
+        <a href="https://github.com/JMinkyoung" target="_blank">https://github.com/JMinkyoung</a>
+      </div>
+      <div class="VelogWrapper">
+        <img class="icon" src="./src/steam/img/velog.png"/>
+        <a href="https://velog.io/@jminkyoung" target="_blank">https://velog.io/@jminkyoung</a>
+      </div>
+    </div>
+  </div>
+  <footer style="color: grey">
+      <p>Copyright 2022. Jwa Minkyoung All rights reserved.</p>
+  </footer>
+  <script>AOS.init();</script>
+  <script type="text/javascript" src="./src/main/index.js"></script>
+</body>
+</html>

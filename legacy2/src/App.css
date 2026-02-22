@@ -1,0 +1,245 @@
+:root {
+  --bg-base: #07090d;
+  --surface: rgba(8, 12, 20, 0.64);
+  --surface-strong: rgba(8, 12, 20, 0.84);
+  --line-soft: rgba(255, 255, 255, 0.2);
+  --line-strong: rgba(255, 220, 77, 0.86);
+  --text-primary: #f7f8fb;
+  --text-secondary: rgba(241, 245, 255, 0.82);
+  --track-fallback: #0a0e16;
+}
+
+.f1-app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 50% 25%,
+    #111827 0%,
+    var(--bg-base) 72%
+  );
+  color: var(--text-primary);
+  font-family: "Orbitron", "Rajdhani", "Eurostile", sans-serif;
+}
+
+.f1-scroll-shell {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+.f1-scroll-shell.is-scrollable {
+  overflow: hidden;
+}
+
+.f1-scroll-shell.is-locked {
+  overflow: hidden;
+}
+
+.f1-scroll-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.f1-layer {
+  position: fixed;
+  inset: 0;
+  transform-origin: center center;
+}
+
+.f1-layer-fpv {
+  z-index: 2;
+  background-color: #080a10;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.f1-layer-top {
+  z-index: 1;
+  background-color: var(--track-fallback);
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, cover;
+}
+
+.f1-layer-flash {
+  z-index: 5;
+  pointer-events: none;
+  background: #fff;
+}
+
+.f1-car-rear,
+.f1-car-top {
+  z-index: 4;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.42));
+}
+
+.f1-car-rear {
+  position: fixed;
+  left: 30%;
+  bottom: 42px;
+  width: min(62vw, 700px);
+}
+
+.f1-car-top {
+  display: block;
+  width: min(17vw, 220px);
+}
+
+.f1-car-top-anchor {
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.f1-car-top-shift {
+  will-change: transform;
+}
+
+.f1-ui {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 12;
+}
+
+.f1-debug-panel {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  z-index: 20;
+  min-width: 170px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(6, 10, 16, 0.78);
+  color: #f7f8fb;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  pointer-events: none;
+}
+
+.f1-start-button {
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 18, 31, 0.9) 0%,
+    rgba(10, 10, 12, 0.92) 100%
+  );
+  color: var(--text-primary);
+  padding: 12px 18px;
+  border-radius: 10px;
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.f1-start-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 220, 77, 0.65);
+}
+
+.f1-scroll-hint {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 11px;
+  border: 1px solid var(--line-soft);
+  background: rgba(10, 15, 25, 0.48);
+  backdrop-filter: blur(6px);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+
+.f1-cards-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.f1-pit-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(52vw, 620px);
+  border-radius: 14px;
+  border: 1px solid var(--line-soft);
+  border-left: 5px solid var(--line-strong);
+  background: linear-gradient(
+    180deg,
+    var(--surface) 0%,
+    var(--surface-strong) 100%
+  );
+  padding: 14px 16px;
+  box-shadow: 0 18px 26px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(6px);
+}
+
+.f1-pit-card-subtitle {
+  margin: 0;
+  color: rgba(255, 223, 97, 0.88);
+  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+}
+
+.f1-pit-card-title {
+  margin: 6px 0 10px;
+  font-size: 1.38rem;
+  letter-spacing: 0.03em;
+}
+
+.f1-pit-card-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 5px;
+  color: var(--text-secondary);
+  font-family: "Rajdhani", "Segoe UI", sans-serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .f1-car-rear {
+    width: min(72vw, 360px);
+    bottom: 28px;
+  }
+
+  .f1-car-top {
+    width: min(32vw, 170px);
+  }
+
+  .f1-car-top-anchor {
+    top: 58%;
+  }
+
+  .f1-ui {
+    top: 14px;
+    left: 14px;
+  }
+
+  .f1-debug-panel {
+    right: 10px;
+    top: 10px;
+    font-size: 11px;
+    min-width: 152px;
+  }
+
+  .f1-pit-card {
+    width: min(90vw, 620px);
+  }
+}
